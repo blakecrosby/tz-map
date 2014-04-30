@@ -5,8 +5,9 @@
 # America.
 #
 # See http://creativecommons.org/publicdomain/zero/1.0/ for more details.
+export PGDATABASE=geo
 
-psql.exe  <<EOF
+psql  <<EOF
 
 DROP TABLE tz_canada_mask;
 
@@ -17,7 +18,7 @@ SELECT AddGeometryColumn('','tz_canada_mask','geom','4326','POLYGON',2);
 
 EOF
 
-shp2pgsql -s 4326 -S -d -g geom -i -I ../../fips_10/map/fips10s fips10s | \
+shp2pgsql -s 4326 -S -d -g geom -i -I ../fips10s/fips10s fips10s | \
     psql -L fips10s.log -q
 
 for p in 01 02 03 04 05 07 08 09 10 11 12 13 14; do 
@@ -49,7 +50,7 @@ shp2pgsql -s 4326 -S -d -g geom -i -I tz_mexico_mask tz_mexico_mask |\
     psql -L tz_mexico_mask.log -q
 
 
-psql.exe <<EOF
+psql <<EOF
 
 -- * indicates a decision beyond what is described in the tz database, 
 -- where the resolution adopted here is deemed reasonable
@@ -1207,7 +1208,7 @@ FROM tz_world
 GROUP by tzid;
 
 EOF
-
+cd output
 pgsql2shp -g geom -f tz_world geo tz_world
 
 pgsql2shp -g geom -f tz_world_mp geo tz_world_mp
