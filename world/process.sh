@@ -1020,7 +1020,7 @@ WHERE tzid = 'unknown'
 UPDATE temp_tz SET tzid = 'Europe/Uzhgorod'
 WHERE fips4 = 'UP25';
 
-UPDATE temp_tz SET tzid = 'Europe/Simferopol'
+UPDATE temp_tz SET tzid = 'Europe/Moscow'
 WHERE fips4 = 'UP11';
 
 UPDATE temp_tz SET tzid = 'Europe/Zaporozhye'
