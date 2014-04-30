@@ -178,7 +178,7 @@ SELECT 'Scott',
 
 INSERT INTO tz_antarctica (station, tzid, geom)
 SELECT 'Troll',
-       'unknown',
+       'Antarctica/Troll',
        pointfromtext ('POINT(2.532222 -72.012083)', 4326);
 
 ------ Poland
