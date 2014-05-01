@@ -1,6 +1,6 @@
 #Introduction#
 
-Eric Muller (http://efele.net/maps/tz/world/)originally created the awesome Shape file of timezones. This essentially allows you to look up a time zone based on geographic coordinates (lat/long). 
+Eric Muller (http://efele.net/maps/tz/world/) originally created the awesome Shape file of time zones. This essentially allows you to look up a time zone based on geographic coordinates (lat/long). 
 
 Why would you want to do this?
 
@@ -8,6 +8,8 @@ Why would you want to do this?
 - You can use it as part of a validation scheme (make sure the users computer time zone is the same as you expect, and they are not using a proxy or VPN)
 - Notify a user if their local time zone setting may be incorrect
 - Show a cool map of what the world looks like with time zone boundaries instead of political ones.
+
+If decided to fork his work so that I can keep the data up to date on my own cycle. As well, I have plans to turn this into a shared library that can be used elsewhere.
 
 #The Data#
 The shape file contains just one field. The "name" of the time zone as found in IANA's Time Zone Database (http://www.iana.org/time-zones). This means that you will have to work with strings such as "America/Toronto" or "Australia/Sydney". 
