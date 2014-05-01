@@ -9,7 +9,7 @@ Why would you want to do this?
 - Notify a user if their local time zone setting may be incorrect
 - Show a cool map of what the world looks like with time zone boundaries instead of political ones.
 
-If decided to fork his work so that I can keep the data up to date on my own cycle. As well, I have plans to turn this into a shared library that can be used elsewhere.
+I decided to fork his work so that I can keep the data up to date on my own cycle. As well, I have plans to turn this into a shared library that can be used elsewhere.
 
 #The Data#
 The shape file contains just one field. The "name" of the time zone as found in IANA's Time Zone Database (http://www.iana.org/time-zones). This means that you will have to work with strings such as "America/Toronto" or "Australia/Sydney". 
