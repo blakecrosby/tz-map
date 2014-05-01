@@ -14,6 +14,9 @@ The shape file contains just one field. The "name" of the time zone as found in 
 
 It's up to you to then convert that time zone name into a proper numerical offset from UTC. This can usually be done with your language of choice and your operating systems local version of the ```zoneinfo``` database.
 
+##Update Frequency##
+I try to update the data as soon as IANA does. They announce updates via their mailing list, and versions are numbered based on the year. So for example: ```2014b``` would be the second version released in 2014. It's usually updated around once a month. 
+
 #Gimme my shapefile!#
 You can find the latest version of the shape file in this repo (in the ```output``` subdirectory):
 
